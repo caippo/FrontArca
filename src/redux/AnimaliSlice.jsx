@@ -5,7 +5,7 @@ import axios from 'axios';
 export const imbarca = createAsyncThunk(
     'animali/imbarca',
     async (formData, thunkAPI) => {
-        const response = await axios.post('/arca/rest/animale/imbarca', formData);
+        const response = await axios.post('http://localhost:8080/arca/rest/animale/imbarca', formData);
         return response.data;
     }
 );

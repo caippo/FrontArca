@@ -11,7 +11,7 @@ const Home = () => {
     const [peso, setPeso] = useState('')
 
     const Sbarca = async (specie, sesso) => {
-        const url = '/arca/rest/animale/sbarca';
+        const url = 'http://localhost:8080/arca/rest/animale/sbarca';
         const data = { specie: specie, sesso: sesso }
         try {
             const response = await axios({
@@ -43,7 +43,7 @@ const Home = () => {
     }
 
     const update = async () => {
-        const url = '/arca/rest/animale/aggiorna';
+        const url = 'http://localhost:8080/arca/rest/animale/aggiorna';
 
         try {
             const response = await axios({
@@ -67,7 +67,7 @@ const Home = () => {
 
     const [jsonData, setJsonData] = useState(null);
     const callRestService = async () => {
-        const url = '/arca/rest/animale/lista';
+        const url = 'http://localhost:8080/arca/rest/animale/lista';
 
         try {
             const response = await axios.get(url);
